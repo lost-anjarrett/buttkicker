@@ -1,0 +1,141 @@
+/****************************************************************
+ **************************  GLOBALS ****************************
+ ***************************************************************/
+
+
+html, body {
+  background-color: #FFA500;
+  font-family: "Mallanna", sans-serif;
+  color: #343434;
+}
+h1 {
+  font-family: "Fruktur", cursive;
+  text-transform: uppercase;
+  font-size: 5rem;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-family: 'Fruktur', cursive;
+  text-align: center;
+}
+header {
+  background: #ffc67c;
+  background: -moz-radial-gradient(center, ellipse cover, #ffc67c 0%, #ffa500 40%, #ffa500 40%, #ffa500 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #ffc67c 0%,#ffa500 40%,#ffa500 40%,#ffa500 100%);
+  background: radial-gradient(ellipse at center, #ffc67c 0%,#ffa500 40%,#ffa500 40%,#ffa500 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc67c', endColorstr='#ffa500',GradientType=1 );
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  padding: 15px;
+}
+ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+}
+
+/* BOOTSTRAP .btn */
+.btn {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #343434;
+  margin: 8px auto;
+}
+.btn:hover {
+  color: #fff !important;
+  opacity: 0.85;
+}
+.action button.btn {
+  display: block;
+  margin: 8px auto;
+  width: 70%;
+}
+#go .btn {
+  margin-top: 75px;
+  padding: 12px;
+}
+
+
+/****************************************************************
+**************************  PRESENTATION ************************
+***************************************************************/
+
+
+.config {
+  background-color: #FFC966;
+  border: 1px solid #343434;
+  border-radius: 4px;
+}
+#player, #adversaire, #go, .action, .tour {
+  padding: 25px;
+  text-align: center;
+}
+.combat #adversaire {
+  padding-top: 0;
+}
+.perso-name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.present-perso {
+  background-color: #FFC966;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  border: 1px solid #343434;
+  border-radius: 4px;
+}
+.not-your-turn {
+  opacity: 0.6;
+}
+
+/* AJOUT DE PERSO */
+#add-form span {
+  display: block;
+}
+#add-perso {
+  width: 75%;
+  margin: 8px auto;
+  padding:25px;
+  border: 1px solid #343434;
+  border-radius: 4px;
+}
+
+/* ESPACE LOG */
+.action h2 {
+  margin-bottom: 25px;
+}
+.log {
+  margin-top: 40px;
+  padding: 25px 0 25px 25px;
+  background-color: #FFC966;
+  border: 1px solid #343434;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  text-align: left;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+
+
+/*************************************************
+ ******************  SCROLLBAR *******************
+ ************************************************/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}

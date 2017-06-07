@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- GoogleFonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fruktur|Mallanna" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../Public/css/style.css?<?php echo filemtime('css/style.css');?>" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center">Combat !!!!</h1>
+    </header>
+    <main class="container">
+      <div class="combat col-md-4">
+        <!-- vous -->
+        <div id="player">
+          <h2>Vous</h2>
+          <article class="present-perso">
+            <h4 class="perso-name"><?= $player->getNom() ?></h4>
+            <ul>
+              <li>Santé : <?= $player->getSante() ?></li>
+              <li>Force : <?= $player->getForce() ?></li>
+              <li>Niveau : <?= $player->getNiveau() ?></li>
+              <li>Expérience : <?= $player->getXp() ?></li>
+            </ul>
+            <input type="hidden" name="idPlayer" value="<?= $player->getId() ?>">
+          </article>
+        </div>
+        <!-- adversaire -->
+        <div id="adversaire" class="not-your-turn">
+          <h2>Adversaire</h2>
+          <article class="present-perso">
+            <h4 class="perso-name"><?= $adversaire->getNom() ?></h4>
+            <ul>
+              <li>Santé : <?= $adversaire->getSante() ?></li>
+              <li>Force : <?= $adversaire->getForce() ?></li>
+              <li>Niveau : <?= $adversaire->getNiveau() ?></li>
+              <li>Expérience : <?= $adversaire->getXp() ?></li>
+            </ul>
+            <input type="hidden" name="idAdversaire" value="<?= $adversaire->getId() ?>">
+          </article>
+        </div>
+      </div>
+      <!-- action -->
+      <div class="action col-md-4">
+        <h2>Action</h2>
+        <button type="button" id="hit" class="btn" onclick="this.blur();">Kicker un butt</button>
+        <button type="button" id="heal" class="btn">soigner ton butt</button>
+        <button type="button" id="quit" class="btn">quitter ce combat</button>
+      </div>
+      <!-- log -->
+      <div class="tour col-md-4">
+        <h2 id=round>Premier tour : A vous de jouer</h2>
+        <div class="log">Le combat commence...</div>
+      </div>
+
+
+
+
+    </main>
+    <footer class="text-center"><div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../Public/js/main.js"></script>
+  </body>
+</html>

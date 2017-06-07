@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- GoogleFonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fruktur|Mallanna" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../Public/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="../../Public/css/style.css?<?php echo filemtime('css/style.css');?>" type="text/css">
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center">Le Butt-kicker</h1>
+    </header>
+    <main class="container">
+      <div class="config clearfix">
+        <!-- choisir un perso -->
+        <div id="player" class="col-md-4">
+          <h2>Selectionner un personnage</h2>
+          <form class="form-group">
+            <select id="player-selector" name="player">
+              <option value="">---</option>
+              <?php foreach ($all_perso as $perso): ?>
+                <option value="<?= $perso['id'] ?>"><?= $perso['nom'] ?></option>
+              <?php endforeach; ?>
+            </select>
+            <button type="submit" class="btn disabled" value="player-selected" disabled>Valider</button>
+          </form>
+          <!-- description du perso -->
+          <article class="present-perso">
+              <h4>Choisissez un personnage</h4>
+          </article>
+          <div id="add-form">
+            <button type="button" id="add" class="btn">Ajouter un personnage</button>
+          </div>
+        </div>
+
+        <!-- adversaire -->
+        <div id="adversaire" class="col-md-4" style="display:none;">
+          <article class="present-perso"></article>
+        </div>
+        <!-- action -->
+        <div class="col-md-2">
+          <form id="go" action="combat.php" method="post" style="display:none;">
+            <input type="hidden" id="idPlayer" name="idPlayer" value="">
+            <input type="hidden" id="idAdversaire" name="idAdversaire" value="">
+            <button type="submit" class="btn"><img src="../../Public/img/icon.png" alt="kick" /></button>
+          </form>
+        </div>
+      </div>
+
+
+    </main>
+    <footer class="text-center"><div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div></footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../Public/js/main.js"></script>
+  </body>
+</html>
