@@ -1,6 +1,6 @@
 <?php
-require_once 'Personnage.class.php';
-require_once 'Manager.class.php';
+require_once '../Model/Personnage.class.php';
+require_once '../Model/Manager.class.php';
 
 extract($_GET);
 
@@ -12,4 +12,4 @@ $adversaire = $manager->recupPerso($idAdvers);
 $manager->savePerso($player);
 $manager->savePerso($adversaire);
 
-header('Location:../Controller/index.php');
+header('Location: index.php');

@@ -3,14 +3,12 @@ require_once 'ConnexionAbstract.class.php';
 
 class Manager extends ConnexionAbstract
 {
-  // constructeur
   public function __construct()
   {
     // appel à setDB de l'objet ConnexionAbstract
     $this->setDB();
   }
 
-  // insertion du personnage en BDD
   public function savePerso(Personnage $perso)
   {
     // par défaut l'id est null donc lors de la première sauvegarde on va récupérer l'id
@@ -48,7 +46,7 @@ class Manager extends ConnexionAbstract
       );
     }
   }
-  // recupération d'un perso sauvegardé grâce à l'ID
+
   public function recupPerso(int $id)
   {
     $req = $this->request('SELECT * FROM personnage WHERE id = ?', array($id));
@@ -67,19 +65,18 @@ class Manager extends ConnexionAbstract
       echo 'Erreur : cet ID ne correspond à aucun personnage...<br/><br/>';
     }
   }
+
   public function getAllPerso()
   {
     $req = $this->request('SELECT * FROM personnage WHERE vivant = 1');
     return $req->fetchAll();
   }
+  
   public function getAdversaire(int $id)
   {
-    // récupère tous les adversaires potentiels (tous les personnage sauf celui avec ID=$id)
     $req = $this->request('SELECT id FROM personnage WHERE id != ? AND vivant = 1', array($id));
     $adversaires = $req->fetchAll();
-    // génère un nbr aléatoire selon la longueur du tableau renvoyé
     $i = rand(0, count($adversaires)-1);
-    // renvoie un adversaire grace à ce nombre
     return $this->recupPerso($adversaires[$i]['id']);
   }
 }

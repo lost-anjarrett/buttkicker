@@ -1,6 +1,6 @@
 <?php
-require_once 'Personnage.class.php';
-require_once 'Manager.class.php';
+require_once '../Model/Personnage.class.php';
+require_once '../Model/Manager.class.php';
 
 
 if (isset($_POST["name"]) AND !empty($_POST["name"])) {

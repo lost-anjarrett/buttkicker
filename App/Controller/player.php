@@ -1,12 +1,12 @@
 <?php
-require_once 'Personnage.class.php';
-require_once 'Manager.class.php';
+require_once '../Model/Personnage.class.php';
+require_once '../Model/Manager.class.php';
 
 
 if (isset($_POST['player']) AND $_POST['player'] !== "")
 {
   $manager = new Manager();
-  if (isset($_POST['adversaire']) AND $_POST['adversaire'])
+  if (isset($_POST['advers']) AND $_POST['advers'])
   {
     $player = $manager->getAdversaire($_POST['player']);
   }

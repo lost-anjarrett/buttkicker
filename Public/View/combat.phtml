@@ -30,7 +30,7 @@
         <!-- vous -->
         <div id="player">
           <h2>Vous</h2>
-          <article class="present-perso">
+          <article class="perso-info">
             <h4 class="perso-name"><?= $player->getNom() ?></h4>
             <ul>
               <li>Santé : <?= $player->getSante() ?></li>
@@ -42,9 +42,9 @@
           </article>
         </div>
         <!-- adversaire -->
-        <div id="adversaire" class="not-your-turn">
+        <div id="advers" class="not-your-turn">
           <h2>Adversaire</h2>
-          <article class="present-perso">
+          <article class="perso-info">
             <h4 class="perso-name"><?= $adversaire->getNom() ?></h4>
             <ul>
               <li>Santé : <?= $adversaire->getSante() ?></li>
@@ -52,14 +52,14 @@
               <li>Niveau : <?= $adversaire->getNiveau() ?></li>
               <li>Expérience : <?= $adversaire->getXp() ?></li>
             </ul>
-            <input type="hidden" name="idAdversaire" value="<?= $adversaire->getId() ?>">
+            <input type="hidden" name="idAdvers" value="<?= $adversaire->getId() ?>">
           </article>
         </div>
       </div>
       <!-- action -->
       <div class="action col-md-4">
         <h2>Action</h2>
-        <button type="button" id="hit" class="btn" onclick="this.blur();">Kicker un butt</button>
+        <button type="button" id="hit" class="btn">Kicker un butt</button>
         <button type="button" id="heal" class="btn">soigner ton butt</button>
         <button type="button" id="quit" class="btn">quitter ce combat</button>
       </div>
@@ -79,6 +79,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../Public/js/fight.js"></script>
     <script src="../../Public/js/main.js"></script>
   </body>
 </html>

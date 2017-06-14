@@ -41,7 +41,7 @@
             <button type="submit" class="btn disabled" value="player-selected" disabled>Valider</button>
           </form>
           <!-- description du perso -->
-          <article class="present-perso">
+          <article class="perso-info">
               <h4>Choisissez un personnage</h4>
           </article>
           <div id="add-form">
@@ -50,14 +50,14 @@
         </div>
 
         <!-- adversaire -->
-        <div id="adversaire" class="col-md-4" style="display:none;">
-          <article class="present-perso"></article>
+        <div id="advers" class="col-md-4" style="display:none;">
+          <article class="perso-info"></article>
         </div>
         <!-- action -->
         <div class="col-md-2">
           <form id="go" action="combat.php" method="post" style="display:none;">
             <input type="hidden" id="idPlayer" name="idPlayer" value="">
-            <input type="hidden" id="idAdversaire" name="idAdversaire" value="">
+            <input type="hidden" id="idAdvers" name="idAdvers" value="">
             <button type="submit" class="btn"><img src="../../Public/img/icon.png" alt="kick" /></button>
           </form>
         </div>
@@ -71,6 +71,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../../Public/js/players.js"></script>
     <script src="../../Public/js/main.js"></script>
   </body>
 </html>

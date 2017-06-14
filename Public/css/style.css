@@ -71,18 +71,18 @@ ul {
   border: 1px solid #343434;
   border-radius: 4px;
 }
-#player, #adversaire, #go, .action, .tour {
+#player, #advers, #go, .action, .tour {
   padding: 25px;
   text-align: center;
 }
-.combat #adversaire {
+.combat #advers {
   padding-top: 0;
 }
 .perso-name {
   text-transform: uppercase;
   font-weight: bold;
 }
-.present-perso {
+.perso-info {
   background-color: #FFC966;
   width: 75%;
   margin-right: auto;
